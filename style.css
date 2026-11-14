@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0d0d12;
+    color: #e0e0e0;
+    line-height: 1.6;
+    padding-top: 80px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #0f0f13;
+    border-bottom: 2px solid rgba(0, 243, 255, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 243, 255, 0.2);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00f3ff;
+    text-shadow: 0 0 10px #00f3ff, 0 0 20px #00f3ff;
+}
+
+main {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #bc13fe;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #bc13fe;
+}
+
+p {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.card {
+    background-color: #1a1a24;
+    border: 1px solid #00f3ff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #00f3ff;
+}
+
+.card h3 {
+    color: #00f3ff;
+    margin-bottom: 15px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.skill-badge {
+    background-color: transparent;
+    color: #00f3ff;
+    border: 1px solid #00f3ff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    box-shadow: 0 0 5px #00f3ff;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    background-color: #1a1a24;
+    border-top: 1px solid #bc13fe;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .card {
+        width: 100%;
+    }
+}
+.goal-card {
+    background-color: #1a1a24;
+    border: 1px solid #bc13fe;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden; 
+}
+
+.goal-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #bc13fe;
+}
+
+.goal-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 2px solid #00f3ff;
+}
+
+.goal-card h3 {
+    color: #00f3ff;
+    margin: 15px 0;
+}
+
+.goal-card p {
+    padding: 0 15px 20px 15px;
+    font-size: 1rem;
+}
+/* Tıklanabilir Kart İpuçları ve Neon Efektleri */
+.goal-card {
+    position: relative;
+    cursor: pointer; /* Fare üzerine gelince el işareti çıkar */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    text-decoration: none;
+}
+
+/* Fare kartın üzerine gelince (Hover) */
+.goal-card:hover {
+    transform: translateY(-8px); /* Kart hafifçe yukarı kalkar */
+    border-color: #00f3ff; /* Kenarlık neon maviye döner */
+    box-shadow: 0 10px 25px rgba(0, 243, 255, 0.35), 0 0 15px rgba(255, 0, 255, 0.2);
+}
+
+/* Sağ üst köşedeki küçük yönlendirme ikonu */
+.kose-ikon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(15, 15, 25, 0.8);
+    color: #00f3ff;
+    border: 1px solid #00f3ff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.goal-card:hover .kose-ikon {
+    background: #00f3ff;
+    color: #0b0b12;
+    transform: rotate(45deg);
+}
+
+.kart-buton {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 18px;
+    border: 1px solid #00f3ff;
+    border-radius: 6px;
+    color: #00f3ff;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-align: center;
+    background: rgba(0, 243, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.kart-buton .ok {
+    display: inline-block;
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.goal-card:hover .kart-buton {
+    background: #00f3ff;
+    color: #0b0b12;
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.6);
+}
+
+.goal-card:hover .kart-buton .ok {
+    transform: translateX(5px);
+}
